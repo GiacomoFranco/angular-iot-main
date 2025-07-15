@@ -1,0 +1,50 @@
+:host {
+    flex-basis: 30rem;
+    flex-grow: 1;
+}
+
+.sensor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sensor img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.sensor-value {
+    font-weight: 600;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    color: var(--main-green);
+}
+
+.sensor-value .sensor-unit {
+    margin-left: .5rem;
+    font-size: 3.5rem;
+    color: var(--dark-green);
+}
+
+.card.inner-card.sensor-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    flex-basis: 30rem;
+    height: 100%
+}
+
+.card.inner-card.sensor-card .sensor-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sensor-state {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    width: fit-content;
+}

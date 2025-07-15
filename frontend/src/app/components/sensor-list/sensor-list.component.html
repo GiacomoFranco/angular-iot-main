@@ -1,0 +1,8 @@
+<article class="card outer-card">
+    <h3 class="card-title">Lecturas recientes</h3>
+    <div class="sensor-list">
+        @for (sensor of sensorsList(); track sensor.id) {
+            <app-sensor-detail [sensorId]="sensor.id"></app-sensor-detail>
+        }
+    </div>
+</article>

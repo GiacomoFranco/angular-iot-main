@@ -1,0 +1,44 @@
+main {
+    margin: 8rem 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1 {
+    color: var(--main-white);
+    font-size: 5.5rem;
+    font-weight: 600;
+    line-height: 6rem;
+    text-wrap: balance;
+    margin-bottom: 2rem;
+}
+
+.content-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.sensor-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    flex-grow: 1;
+    gap: 2rem;
+    width: 100%;    
+}
+
+.side-panel {
+    flex-basis: 25%;
+    flex-grow: 1;
+    max-height: 79.3rem;
+    min-width: 46rem;
+    min-height: 59.6rem;
+    position: sticky;
+    top: 20px;
+}

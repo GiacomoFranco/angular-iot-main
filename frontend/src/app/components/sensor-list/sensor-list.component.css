@@ -1,0 +1,9 @@
+article {
+    height: fit-content;
+}
+
+.sensor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}

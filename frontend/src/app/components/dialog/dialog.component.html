@@ -1,0 +1,12 @@
+<div class="section-container">
+    <span class="dialog" [style.backgroundColor]="isSeverityHigh() ? 'var(--main-green)' : 'var(--panel-black)'">
+
+        <div class="message">
+            <img [src]="icon().path" [alt]="icon().name" />
+            <p [style.color]="isSeverityHigh() ? 'var(--main-black)' : 'var(--main-white)'">
+                Hubo un error con uno de los sensores, revisar el panel de alertas: <b>{{ dialogMessage().datos.codigoError }}</b>
+            </p>
+        </div>
+        <img class="close-button" [src]="isSeverityHigh() ? '/assets/resources/close.svg' : '/assets/resources/close-white.svg'" alt="Cerrar alerta" (click)="dialogService.closeDialog()" />
+    </span>
+</div>

@@ -1,0 +1,170 @@
+/* 
+  TODO: Implementar estilos globales profesionales
+  
+  Recomendaciones:
+  - Usar variables CSS para consistencia
+  - Implementar theme switching (light/dark)
+  - Crear utilities classes reutilizables
+  - Asegurar responsive design
+  - Considerar accesibilidad (contraste, focus states)
+*/
+
+:root {
+  --main-black: #151515;
+  --darker-black: #000000;
+  --panel-black: #09090B;
+  --outline-panel: #474747;
+  --main-green: #DCFF00;
+  --green: #ddff00de;
+  --dark-green: #6a7235;
+  --darker-green: #454e0f;
+  --main-white: #FFFFFF;
+  --secondary-white: #ffffff8e;
+
+  --panel-radius: 1.3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: 'GalanoGrotesque', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--main-white);
+  background-color: var(--darker-black);
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+app-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  border-radius: var(--panel-radius);
+  padding: 2rem;
+}
+
+.outer-card{
+  background-color: var(--panel-black);
+}
+
+.inner-card {
+  background-color: var(--main-black);
+}
+
+.card-title {
+  color: var(--main-white);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+/* 
+  TODO: Agregar tus estilos aquí
+  
+  Considera implementar:
+  - Variables CSS para colores y espaciado
+  - Grid y flexbox utilities
+  - Button styles
+  - Card components
+  - Loading states
+  - Animation utilities
+  - Responsive breakpoints
+*/
+
+
+/* FUENTES */
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueRegular.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueLightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GalanoGrotesque';
+  src: url('src/styles/fonts/GalanoGrotesque/GalanoGrotesqueSemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* CUSTOM SCROLLBAR */
+
+*::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+  padding-left: .5rem
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: 0 0 .5rem 0 #151804 inset;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6f8000;
+  border-radius: 2rem;
+}
+
+*::-webkit-scrollbar-button {
+  height: 0rem;
+  width: 0rem;
+}

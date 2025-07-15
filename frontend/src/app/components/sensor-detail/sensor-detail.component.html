@@ -1,0 +1,12 @@
+@if (sensorData()) {
+    <article class="card inner-card sensor-card">
+        <h3>{{ sensorData().nombreSensor }}</h3>
+        <div class="sensor-detail">
+            <div class="sensor">
+                <img [src]="icon().path" [alt]="icon().name">
+                <p class="sensor-value">{{ sensorData().valor}}<span class="sensor-unit">{{ sensorData().unidad }}</span></p>
+            </div>
+            <span class="sensor-state" [appStateTag]="sensorData().estado">{{ sensorData().estado }}</span>
+        </div>
+    </article>
+}

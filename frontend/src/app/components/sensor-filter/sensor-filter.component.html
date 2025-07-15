@@ -1,0 +1,61 @@
+<article class="card outer-card">
+    <h3 class="card-title">Sensores registrados</h3>
+    <form class="filter-form">
+        <div class="form-group">
+            <label for="sensor-type-filter">Tipo: </label>
+            <select id="sensor-type-filter" #sensorType (change)="filteredSensorsService.selectSensorType(sensorType.value)">
+                @for (type of filteredSensorsService.selectableSensorTypes; track $index) {
+                    <option value="{{ type.value }}">{{ type.label }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sensor-location-filter">Ubicación: </label>
+            <select id="sensor-location-filter" #sensorLocation (change)="filteredSensorsService.selectSensorLocation(sensorLocation.value)">
+                @for (location of filteredSensorsService.selectableSensorLocations; track $index) {
+                <option value="{{ location.value }}">{{ location.label }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="sensor-state-filter">Estado: </label>
+            <select id="sensor-state-filter" #sensorState (change)="filteredSensorsService.slectSensorState(sensorState.value)">
+                @for (state of filteredSensorsService.selectableSensorStates; track $index) {
+                <option value="{{ state.value }}">{{ state.label }}</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group search">
+            <label for="sensor-search">Buscar: </label>
+            <input type="text" id="sensor-search" #sensorSearch (keyup)="filteredSensorsService.filterByIdOrName(sensorSearch.value)">
+        </div>
+
+    </form>
+    <div class="sensor-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (sensor of sensors(); track sensor.id) {
+                    <tr>
+                        <td>{{ sensor.id }}</td>
+                        <td>{{ sensor.nombre }}</td>
+                        <td>{{ sensor.tipo | titlecase }}</td>
+                        <td>{{ sensor.ubicacion.zona | titlecase}}</td>
+                        <td>{{ sensor.estado | titlecase }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</article>

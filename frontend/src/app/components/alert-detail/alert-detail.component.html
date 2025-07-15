@@ -1,0 +1,12 @@
+<div class="card inner-card alert-card" [class.high]="alert().datos.severidad === 'alta'">
+    <div class="alert-detail">
+        <img [src]="icon().path" [alt]="icon().name">
+        <div class="alert-info">
+            <h3>{{ alert().datos.nombreSensor }}</h3>
+            <P>Error: {{ alert().datos.mensaje }}</P>
+        </div>
+    </div>
+    <div class="alert-time">
+        <p>{{ alert().timestamp | date: 'shortTime'}}</p>
+    </div>
+</div>

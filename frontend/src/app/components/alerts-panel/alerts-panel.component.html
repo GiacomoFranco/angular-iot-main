@@ -1,0 +1,12 @@
+<article class="card outer-card">
+    <h3 class="card-title">Alertas y Eventos</h3>
+    <div class="sensor-list">
+        @for (alert of alerts(); track alert.timestamp) {
+            <app-alert-detail [alert]="alert"></app-alert-detail>
+        } @empty {
+            <div>
+                <p>Todo está en orden 🎉</p>
+            </div>
+        }
+    </div>
+</article>
