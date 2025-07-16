@@ -22,7 +22,7 @@ export class WebSocketService {
     this.webSocketMessageSignal.asReadonly();
 
   openWebSocket() {
-    this.socket = new WebSocket("ws://localhost:8080");
+    this.socket = new WebSocket("https://dashboardback-6tbq.onrender.com");
 
     this.socket.onopen = () => {
       console.log("Conexión abierta");
