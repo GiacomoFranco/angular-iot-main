@@ -1,6 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { RESOURCES } from 'src/app/constants/constants';
-import { DialogService } from 'src/app/servicios/dialog.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'app-dialog',

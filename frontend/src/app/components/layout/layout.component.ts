@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { DialogComponent } from '../dialog/dialog.component';
-import { DialogService } from 'src/app/servicios/dialog.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: "app-layout",

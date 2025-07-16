@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { MensajeErrorSensor } from '../types/sensor.types';
-import { DialogService } from '../servicios/dialog.service';
+import { DialogService } from './dialog.service';
 
 @Injectable({
   providedIn: "root",
